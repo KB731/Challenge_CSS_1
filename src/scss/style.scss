@@ -30,7 +30,48 @@ Body Copy
 
 $Font-size: 15px;  /*paragraph*/
 
-//Font
+.container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr 1.5fr 1.2fr 1fr;
+    grid-template-areas:
+            "nav nav nav"
+            "main main new"
+            "main main new"
+            "content1 content2 content3";
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+nav{
+    grid-area: nav;
+    background-color: $Soft-orange;
+}
+
+main{
+    grid-area: main;
+    background-color: $Soft-red;
+}
+
+.new{
+    grid-area: new;
+    background-color: $Off-white;
+}
+
+.content1{
+    grid-area: content1;
+    background-color: $Grayish-blue;
+}
+
+.content2{
+    grid-area: content2;
+    background-color: $Dark-grayish-blue;
+}
+
+.content3{
+    grid-area: content3;
+    background-color: $Very-dark-blue;
+}
 
 
-$Weights: 400, 700, 800;
+
